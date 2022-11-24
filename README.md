@@ -6,4 +6,20 @@ Welcome to contact ExposomeX development team by E-mail: exposomex@gmail.com
 
 Wish you enjoy the packages!
 
-       
+Credits to the ExposomeX packages:
+Co-founders: Bin Wang (Peking University) and Mingliang Fang (Fudan University)
+   Changxin Lan, Peking University, main contributor to ExpoSurvival, building web back-end and R package framework of all modules.
+   Fanrong Zhao, Nanyang Technological University, ???
+   Guohuan Zhang, Peking University, main contributor to ExpoMultiOmics.
+   Han Wang, Peking University, code testing.
+   Mengyuan Ren, Peking University, main contributor to ExpoMediation.
+   Min Nian, Fudan University, ???
+   Ning Gao, Peking University, main contributor to ExpoViz and the visualization of the other modules
+   Shu Su, Peking University, code testing.
+   Weinan Lin, Peking University, main contributor to ExpoMeta and ExpoDB.
+   Xiaotong Ji, Fudan University, ???
+   Xiaojia Chen, Fudan University, ???
+   Xuqiang Shao and his graduate students (Mingyu Li, Baiqiang Li, Yizhong Jin, Siqing Zhang), North China Electric Power University, providing the network technology support.
+   Yanqiu Feng, Peking University, main contributor to ExpoStatistics and ExpoMixEffect.
+   Yuting Wang, Peking University, code testing.
+   Zhijian Liu, North China Electric Power University, consultant expert.
