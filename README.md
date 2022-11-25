@@ -11,3 +11,16 @@ Wish you enjoy the packages!
 Co-founders: Bin Wang (Peking University, binwang@pku.edu.cn) and Mingliang Fang (Fudan University, mlfang@fudan.edu.cn)
 
 Nov 25th, 2022
+
+
+
+if (!requireNamespace("devtools", quietly = TRUE)){
+  
+  install.packages("devtools")
+  
+  devtools::install_github('ExposomeX/excros/excros',force = TRUE)
+  
+  devtools::install_github('ExposomeX/extidy/extidy',force = TRUE) 
+  #Note: "extidy" package is optional if the data file has been well prepared. However, the it is recommended as users may need tidy the data to meet the modeling requirement, such as delete varaibles with low variance, transforming data type, classifying variable into several level, etc.
+  
+}
