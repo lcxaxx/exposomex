@@ -66,8 +66,8 @@ results than other autotune methods. If you want to train a better model, choose
 \examples{
 res <- InitMo()
    res <- LoadMO(PID=res$PID, UseExample = "example#1", DataPath = NULL, VocaPath = NULL)
-   res2 <- MulOmicsCros(PID=res$PID, OutPath = "default", OmicGroups = "immunome,metabolome,proteome", 
-   VarsY = "Y1", VarsC = "all.c", TuneMethod = "random_search", TuneNum = 5, RsmpMethod = "cv", Folds = 5, 
+   res2 <- MulOmicsCros(PID=res$PID, OutPath = "default", OmicGroups = "immunome,metabolome,proteome",
+   VarsY = "Y1", VarsC = "all.c", TuneMethod = "random_search", TuneNum = 5, RsmpMethod = "cv", Folds = 5,
    Ratio = 0.67, Repeats = 5, VarsImpThr = 0.85, SG_Lrns ="lasso,enet,rf,xgboost")
 }
 \author{

@@ -16,7 +16,9 @@ Initialize ExpoTidy module analysis. It can generate an R6 class object.
 It is designed to tidy the data for the target model analysis.
 }
 \examples{
-res <- InitTidy()
+res = InitTidy()
+   res
+   FuncExit(PID = res$PID)
 }
 \author{
 Bin Wang

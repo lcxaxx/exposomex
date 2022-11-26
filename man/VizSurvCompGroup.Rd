@@ -42,7 +42,7 @@ Compare the survival curves of two groups
 res <- InitSurv()
    res1 = LoadSurv(PID = res$PID, UseExample = "example#1")
    res6 = VizSurvCompGroup(PID=res$PID,TimeY="Y1",EventY="Y2",VarsG="C3",
-   Model="km",,Brightness="light",Palette='default1')
+   Model="km",Brightness="light",Palette='default1')
    FuncExit(PID = res$PID)
 }
 \author{

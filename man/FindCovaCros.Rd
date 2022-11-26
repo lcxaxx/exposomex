@@ -4,7 +4,7 @@
 \alias{FindCovaCros}
 \title{Find covariates}
 \usage{
-FindCovaCros = function(PID, OutPath = "default", VarsY, VarsC_Prior = "default", 
+FindCovaCros(PID, OutPath = "default", VarsY, VarsC_Prior = "default",
     VarsC_Fixed = NULL, Method = "single.factor", Thr = 0.1)
 }
 \arguments{
@@ -35,7 +35,7 @@ Find covariates
 \examples{
 res <- InitCros()
    res1 = LoadCros(PID = res$PID, UseExample = "example#1")
-   res11 = FindCovaCros(PID=res$PID, VarsY = "Y1", 
+   res2 = FindCovaCros(PID=res$PID, VarsY = "Y1",
    VarsC_Prior = "default", VarsC_Fixed = NULL, Method = "single.factor", Thr = 0.1)
    FuncExit(PID = res$PID)
 }

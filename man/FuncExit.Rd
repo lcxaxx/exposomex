@@ -96,7 +96,7 @@ res = InitBioLink()
    res2 = ConvToExpoID(PID = res$PID)
    FuncExit(PID = res$PID)
 res = InitCros()
-   res1 = LoadtCros(PID = res$PID,UseExample = "example#1")
+   res1 = LoadCros(PID = res$PID,UseExample = "example#1")
    FuncExit(PID = res$PID)
 res = InitBioLink()
    res = LoadBioLink(PID = res$PID,UseExample = "example#1")
@@ -122,10 +122,10 @@ res = InitBioLink()
    FuncExit(PID = res$PID)
 res <- InitMo()
    res <- LoadMO(PID=res$PID, UseExample = "example#1", DataPath = NULL, VocaPath = NULL)
-   res2 <- MulOmicsCros(PID=res$PID, OutPath ="default", OmicGroups = "immunome,metabolome,proteome", 
-   VarsY = "Y1", VarsC = "all.c", TuneMethod = "random_search", TuneNum = 5, RsmpMethod = "cv", Folds = 5, 
+   res2 <- MulOmicsCros(PID=res$PID, OutPath ="default", OmicGroups = "immunome,metabolome,proteome",
+   VarsY = "Y1", VarsC = "all.c", TuneMethod = "random_search", TuneNum = 5, RsmpMethod = "cv", Folds = 5,
    Ratio = 0.67, Repeats = 5, VarsImpThr = 0.85, SG_Lrns ="lasso,enet,rf,xgboost")
-   res3 <- VizMultOmic(PID=res$PID, OutPath = "default", VarsY = "Y1", NodeNum=100, EdgeThr= 0.45, 
+   res3 <- VizMultOmic(PID=res$PID, OutPath = "default", VarsY = "Y1", NodeNum=100, EdgeThr= 0.45,
    Layout = "force-directed", Brightness = "light", Palette = 'default1')
    FuncExit(PID = res$PID)
 res = InitBioLink()
@@ -150,10 +150,10 @@ res = InitTidy()
    res1 = LoadTidy(PID=res$PID, UseExample="example#1")
    res2 = DelNearZeroVar(PID=res$PID)
    FuncExit(PID = res$PID)
-OutPath = getwd()
-   res = InitViz()
-   res = LoadViz(PID = res$PID,UseExample = "example#1")
-   res2 = VizCateDot(PID=res$PID,OutPath = Path,Group = "T",Vars = "X4,X5,X6,X7,X8,X9,X10",Parameter = "mean",
+res = InitViz()
+   res1 = LoadViz(PID = res$PID,UseExample = "example#1")
+   res2 = VizCateDot(PID=res$PID,OutPath = "default",Group = "F",
+   Vars = "X4,X5,X6,X7,X8,X9,X10",Parameter = "mean",
    Brightness = "light",Palette = "default1")
    FuncExit(PID = res$PID)
 }

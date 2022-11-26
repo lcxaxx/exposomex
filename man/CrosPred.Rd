@@ -4,8 +4,8 @@
 \alias{CrosPred}
 \title{Build prediction models}
 \usage{
-CrosPred = function(PID,OutPath = "default",VarsY,VarsX = "all.x",
-    PredType = "response",VarsSel = "F",VarsSelThr = 0.1,IncCova = T,
+CrosPred(PID,OutPath = "default",VarsY,VarsX = "all.x",
+    PredType = "response",VarsSel = FALSE,VarsSelThr = 0.1,IncCova = TRUE,
     RsmpMethod = "cv",Folds = 5,Ratio = 0.667,Repeats = 5)
 }
 \arguments{
@@ -27,7 +27,7 @@ for the actual values and "prob" for outcome with binary variable.}
 \item{VarsSel}{lgl. Whether to select the significant variable for the final model.
 Available options include T (or TRUE) and F (or FALSE).}
 
-\item{VarsSelThr}{num. If "VarsSel" = T, provide the selection threshold of
+\item{VarsSelThr}{num. If "VarsSel" = TRUE, provide the selection threshold of
 the P-value. Three value can be chosen, i.e. 0.05, 0.1, and 0.2.}
 
 \item{IncCova}{lgl. Whether to include the covariate selected in the function of "FindCovaCros".
@@ -51,10 +51,10 @@ Build prediction models
 \examples{
 res <- InitCros()
    res1 = LoadCros(PID = res$PID, UseExample = "example#1")
-   res2 = TransScale(PID=res$PID, Group="T", Vars="all.x", Method="normal")
-   res3 = CrosPred(PID=res$PID, VarsY = "Y1", VarsX = "X5,X6,X7,X8,X9,X10,X11",
-   PredType = "response",VarsSel = F,VarsSelThr = 0.1,IncCova = F,
-   RsmpMethod = "cv" ,Folds = 5,Ratio = 0.667,Repeats = 5)
+   #res2 = TransScale(PID=res$PID, Group=TRUE, Vars="all.x", Method="normal")
+   #res3 = CrosPred(PID=res$PID, VarsY = "Y1", VarsX = "X5,X6,X7,X8,X9,X10,X11",
+   #PredType = "response",VarsSel = FALSE,VarsSelThr = 0.1,IncCova = FALSE,
+   #RsmpMethod = "cv", Folds = 5,Ratio = 0.667,Repeats = 5)
    FuncExit(PID = res$PID)
 }
 \author{

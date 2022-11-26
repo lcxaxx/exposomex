@@ -47,10 +47,10 @@ You can get different styles of images by selecting different parameters.
 \examples{
 res <- InitMo()
    res <- LoadMO(PID=res$PID, UseExample = "example#1", DataPath = NULL, VocaPath = NULL)
-   res2 <- MulOmicsCros(PID=res$PID, OutPath = "default", OmicGroups = "immunome,metabolome,proteome", 
-   VarsY = "Y1", VarsC = "all.c", TuneMethod = "random_search", TuneNum = 5, RsmpMethod = "cv", Folds = 5, 
+   res2 <- MulOmicsCros(PID=res$PID, OutPath = "default", OmicGroups = "immunome,metabolome,proteome",
+   VarsY = "Y1", VarsC = "all.c", TuneMethod = "random_search", TuneNum = 5, RsmpMethod = "cv", Folds = 5,
    Ratio = 0.67, Repeats = 5, VarsImpThr = 0.85, SG_Lrns ="lasso,enet,rf,xgboost")
-   res3 <- VizMultOmic(PID=res$PID, OutPath = "default", VarsY = "Y1", NodeNum=100, EdgeThr= 0.45, 
+   res3 <- VizMultOmic(PID=res$PID, OutPath = "default", VarsY = "Y1", NodeNum=100, EdgeThr= 0.45,
    Layout = "force-directed", Brightness = "light", Palette = 'default1')
 }
 \author{

@@ -4,7 +4,7 @@
 \alias{VizCrosAsso}
 \title{Visualize association analysis}
 \usage{
-VizCrosAsso = function(PID, OutPath = "default",VarsN = "single.factor",
+VizCrosAsso(PID, OutPath = "default",VarsN = "single.factor",
     Layout = "volcano",Brightness = "light",Palette = "default1")
 }
 \arguments{
@@ -32,11 +32,11 @@ Visualize association analysis
 \examples{
 res <- InitCros()
    res1 = LoadCros(PID = res$PID, UseExample = "example#1")
-   res2 = CrosAsso(PID=res$PID, EpiDesign = "cohort", VarsY = "Y1", 
-   VarsX = "X5,X6,X7,X8,X9,X10,X11", VarsN = "single.factor" , 
-   VarsSel = F, VarsSelThr = 0.1, IncCova = T, Family = "gaussian", 
-   RepMsr = F,Corstr = "ar1")
-   res13 = VizCrosAsso(PID=res$PID,VarsN="single.factor", Layout = "forest",
+   res2 = CrosAsso(PID=res$PID, EpiDesign = "cohort", VarsY = "Y1",
+   VarsX = "X5,X6,X7,X8,X9,X10,X11", VarsN = "single.factor",
+   VarsSel = FALSE, VarsSelThr = 0.1, IncCova = TRUE, Family = "gaussian",
+   RepMsr = FALSE,Corstr = "ar1")
+   res3 = VizCrosAsso(PID=res$PID,VarsN="single.factor", Layout = "forest",
    Brightness = "dark",Palette = "default1")
    FuncExit(PID = res$PID)
 }

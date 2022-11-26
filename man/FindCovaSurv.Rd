@@ -4,7 +4,7 @@
 \alias{FindCovaSurv}
 \title{Find covariates}
 \usage{
-FindCovaSurv = function(PID, OutPath = "default", TimeY, EventY, VarsC_Prior = "default", 
+FindCovaSurv = function(PID, OutPath = "default", TimeY, EventY, VarsC_Prior = "default",
     VarsC_Fixed = NULL, Method = "single.factor", Thr = 0.1)
 }
 \arguments{
