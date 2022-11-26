@@ -1,5 +1,5 @@
 Package: exposomex
-Title:  One integrated platform for exposomic analysis.
+Title: One integrated platform for exposomic analysis.
 Version: 1.0.0
 Authors@R: 
     c(
@@ -35,5 +35,5 @@ Description: One integrated platform for exposomic analysis, including 14 packag
 License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.0
+RoxygenNote: 7.2.1
 Imports: httr,vroom,ggplot2,readxl,grid,gridExtra,writexl,ddpcr,GGally,gt
