@@ -24,6 +24,7 @@ res = test_connect()
 #' @author Bin Wang
 
 InitTidy = function(){
+  ddpcr::quiet(library(gridExtra))
   url = paste0(urlhead,'InitTidy')
   seednum = sample(1000,1)
   res = httr::POST(url,

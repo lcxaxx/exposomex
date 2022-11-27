@@ -1,5 +1,4 @@
 
-library(gridExtra)
 urlhead = 'http://www.exposomex.cn:8080/'
 
 #' @title Initialize ExpoNTA module
@@ -15,6 +14,7 @@ urlhead = 'http://www.exposomex.cn:8080/'
 #' @author Mingliang Fang, Bin Wang (corresponding author)
 
 InitNTA = function(){
+  ddpcr::quiet(library(gridExtra))
   url = paste0(urlhead,'InitNTA')
   seednum = sample(1000,1)
   res = httr::POST(url,

@@ -1,5 +1,4 @@
 urlhead = 'http://www.exposomex.cn:8080/'
-library(gridExtra)
 
 #' @title Initialize ExpoMediation module
 #' @description Initialize ExpoMediation module analysis. It can generate an R6
@@ -17,6 +16,7 @@ library(gridExtra)
 #' @author Mengyuan Ren, Bin Wang(corresponding author)
 
 InitMedt = function(){
+  ddpcr::quiet(library(gridExtra))
   url = paste0(urlhead,'InitMedt')
   seednum = sample(1000,1)
   res = httr::POST(url,

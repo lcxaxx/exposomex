@@ -1,5 +1,4 @@
 
-library(gridExtra)
 urlhead = 'http://www.exposomex.cn:8080/'
 
 #' @title Initialize ExpoPanel module
@@ -14,6 +13,7 @@ urlhead = 'http://www.exposomex.cn:8080/'
 #' @author Bin Wang (corresponding author)
 
 InitPanel = function(){
+  ddpcr::quiet(library(gridExtra))
   url = paste0(urlhead,'InitPanel')
   seednum = sample(1000,1)
   res = httr::POST(url,

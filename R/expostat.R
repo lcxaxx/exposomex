@@ -1,4 +1,3 @@
-library(gridExtra)
 
 urlhead = 'http://www.exposomex.cn:8080/'
 
@@ -11,6 +10,7 @@ urlhead = 'http://www.exposomex.cn:8080/'
 #' @author Yanqiu Feng, Bin Wang (corresponding author)
 
 InitStat = function(){
+  ddpcr::quiet(library(gridExtra))
   url = paste0(urlhead,'InitStat')
   seednum = sample(1000,1)
   res = httr::POST(url,

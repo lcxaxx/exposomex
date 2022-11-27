@@ -1,5 +1,4 @@
 
-library(gridExtra)
 urlhead = 'http://www.exposomex.cn:8080/'
 
 #' @title Initialize ExpoStatLink module
@@ -14,6 +13,7 @@ urlhead = 'http://www.exposomex.cn:8080/'
 #' @author Bin Wang 
 
 InitStatLink = function(){
+  ddpcr::quiet(library(gridExtra))
   url = paste0(urlhead,'InitStatLink')
   seednum = sample(1000,1)
   res = httr::POST(url,

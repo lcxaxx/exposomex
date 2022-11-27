@@ -14,6 +14,7 @@ urlhead = 'http://www.exposomex.cn:8080/'
 #' @author Ning Gao, Bin Wang (corresponding author)
 
 InitViz = function(){
+  ddpcr::quiet(library(gridExtra))
   url = paste0(urlhead,'InitViz')
   library(gridExtra)
   ddpcr::quiet(library(GGally))

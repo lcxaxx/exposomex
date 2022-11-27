@@ -7,6 +7,9 @@ Authors@R:
     family = 'Wang',
     role= c('aut','cph','cre'),
     email = "binwang@pku.edu.cn"),
+    person(given='Mingliang',
+    family = 'Fang',
+    role= c('aut')),
     person(given='Changxin',
     family = 'Lan',
     role= c('aut')),
@@ -29,7 +32,7 @@ Authors@R:
     family = 'Wang',
     role= c('aut'))
     )
-Description: One integrated platform for exposomic analysis, including 14 packages:
+Description: One integrated platform "ExpsomeX" for exposomic analysis, including 14 sub-packages:
     'exstat','exviz','exdb','excros','exmo','exmeta','exmedt','exnta','exsurv','expanel',
     'exmix','exstatlink','exbiolink' and 'extidy'.
 License: GPL (>= 3)

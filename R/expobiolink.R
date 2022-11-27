@@ -16,6 +16,7 @@ urlhead = 'http://www.exposomex.cn:8080/'
 
 
 InitBioLink = function(){
+  ddpcr::quiet(library(gridExtra))
   url = paste0(urlhead,'InitBioLink')
   seednum = sample(1000,1)
   res = httr::POST(url,
