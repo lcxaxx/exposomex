@@ -38,5 +38,5 @@ Description: One integrated platform "ExpsomeX" for exposomic analysis, includin
 License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.1
+RoxygenNote: 7.2.2
 Imports: httr,vroom,ggplot2,readxl,grid,gridExtra,writexl,ddpcr,GGally,gt
