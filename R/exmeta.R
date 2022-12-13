@@ -78,6 +78,7 @@ LoadMeta =function(PID,
 #' @details MetaRefer provides the functions of paper retrieval and relevance sorting, returning the information to the user based on keywords.
 #'    Please attention, PID must be got from the return result of InitMeta().
 #'    MetaRefer can only run successfully after successfully running InitMeta and LoadMeta functions.
+#' @export
 #' @return A list object containing dataframe of articles' information.
 #' @examples res <- InitMeta()
 #'    res1 <- LoadMeta(PID = res$PID, UseExample = "example#1",  DataPath = NULL)
