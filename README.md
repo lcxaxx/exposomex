@@ -68,7 +68,7 @@ res4 = VizCrosAsso(PID = res$PID,
 res4$Y1_single.factor_forest_dark_default1 
 
 
-- ** Build molti-omic prediction model**
+- **Build multi-omic prediction model**
 
 res <- InitMO()
 
