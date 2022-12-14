@@ -1,7 +1,7 @@
 ### Welcome to ExposomeX platform to expedite the discovery of “Exposure-Biology-Disease” nexus!
 Exposome has become the hotspot of next-generation health studies. To date, there is no available effective platform to standardize the analysis of exposomic data. In ExposomeX, we aim to propose one new framework of exposomic analysis and build up one novel integrated platform to expediate the discovery of “Exposure-Biology-Disease” nexus. In ExposomeX, we have built up one integrated platform for exposomic analysis. In total, we have developed **SIX** major modules, which include exposomic mass spectrometry data processing (E-MS), statistical analyses of “chemicals-endogenous omics-diseases” interaction (E-STAT), exposome database search (E-DB), meta-analysis of chemical-diseases (E-META), biological explanation of chemical-diseases (E-BIO) and visualization of multiple dimension data (E-VIZ). Here, we provide R package "exposomex" to conduct the data analysis. Users can also install part of the packages, i.e., the **15** R packages including extidy (tidy data), exstat (statistical desicription), exviz (data visualization), exdb (data base), exmo (multi-omic data), excros (cross-section data), exmedt (mediation effect), expanel (panel data), exsurv (survival analysis), exmix (mixture effect), exnta (non-targeted analysis), exbiolink (biological link), exstatlink (statistical link), and exmeta (meta-analysis). User can also use these packages by web-interaction, see: http://www.exposomex.cn. In sum, we have proposed a novel framework for standardized exposomic analysis, which can be accessed using both R and online interactive platform. All the modules will keep updating. Please see the user tutorials at: http://www.exposomex.cn/#/toturial.
 
-![image](https://user-images.githubusercontent.com/108805912/207656110-54ae8518-c924-47c8-b1eb-34db31ef9063.png)
+![image](https://user-images.githubusercontent.com/108805912/207656593-da8063d3-e527-42cb-ba4b-e2a078d356b7.png)
 
 Credits should be given to the core development members for their significant contributions to the individual 14 R packages including Bin Wang (extidy, exdb, excros, exmix, expanel, and exstatlink), Mingliang Fang (exnta and exbiolink), Yanqiu Feng (exstat), Ning Gao (exviz), Guohuan Zhang and Yuting Wang (exmo), Mengyuan Ren (exmedt), Changxin Lan (exsurv), and Weinan Lin (exmeta). Special credits to Changxin Lan for making the codes into R packages of all modules, Ning Gao for providing help to most of the visualization funcitons, and Weinan Lin for tidying the IDs of chemicals, proteins, and diseases. The other contributors are acknowledged at http://www.exposomex.cn/#/about.
   
@@ -14,7 +14,7 @@ Co-founders: Bin Wang (Peking University, binwang@pku.edu.cn) and Mingliang Fang
 2022-11-27
 
 
-# **Quick start** 
+### **Quick start** 
 
 devtools::install_github("ExposomeX/exposomex", force = TRUE)
 library(exposomex)
@@ -30,8 +30,6 @@ res2 = ExpoConv(PID = res$PID,
                 To = "cas.rn",
                 Keys = "default")
 res2
-
-FuncExit(PID = res$PID)
 
 #Calculate the association
 res <- InitCros()
@@ -62,9 +60,6 @@ res4 = VizCrosAsso(PID = res$PID,
                    Brightness = "dark",
                    Palette = "default1")
 res4$Y1_single.factor_forest_dark_default1 
-
-FuncExit(PID = res$PID)
-
 
 #Build molti-omic prediction model
 res <- InitMO()
