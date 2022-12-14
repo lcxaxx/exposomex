@@ -26,113 +26,114 @@ library(exposomex)
 
     res <- InitDb()
 
-res1 = LoadDb(PID = res$PID, 
-              UseExample = "example#1")
-
-res2 = ExpoConv(PID = res$PID,
-                From = "chemical",
-                To = "cas.rn",
-                Keys = "default")
-res2
-
-
+    res1 = LoadDb(PID = res$PID, 
+                  UseExample = "example#1")
+    
+    res2 = ExpoConv(PID = res$PID,
+                    From = "chemical",
+                    To = "cas.rn",
+                    Keys = "default")
+    res2
+    
+    
 - **Calculate the association**
 
-res <- InitCros()
-
-res1 = LoadCros(PID = res$PID,
-                UseExample = "example#1")
-
-res2 = TransScale(PID = res$PID, 
-                  Group = "T", 
-                  Vars = "all.x", 
-                  Method = "normal")
-
-res3 = CrosAsso(PID = res$PID,
-                EpiDesign = "cross.sectional", 
-                VarsY = "Y1",
-                VarsX = "X5,X6,X7,X8,X9,X10,X11", 
-                VarsN = "single.factor",
-                VarsSel = FALSE, 
-                VarsSelThr = 0.1, 
-                IncCova = TRUE, 
-                Family = "gaussian")
-res3$Y1_single.factor_cross.sectional_gaussian
-
-res4 = VizCrosAsso(PID = res$PID,
-                   VarsY = "Y1",
-                   VarsN ="single.factor",
-                   Layout = "forest",
-                   Brightness = "dark",
-                   Palette = "default1")
-res4$Y1_single.factor_forest_dark_default1 
-
-
-- **Build multi-omic prediction model**
-
-res <- InitMO()
-
-res1 <- LoadMO(PID = res$PID, 
-               UseExample = "example#1")
-
-res2 <- MulOmicsCros(PID = res$PID, 
-                     OmicGroups = "immunome,metabolome,proteome",
-                     VarsY = "Y1", 
-                     VarsC = "all.c", 
-                     TuneMethod = "default", 
-                     TuneNum = 5, 
-                     RsmpMethod = "cv",
-                     VarsImpThr = 0.85,
-                     SG_Lrns ="enet,rf")
-res2$SGModel_summary
-
-res3 <- VizMulOmicCros(PID = res$PID, 
-                       VarsY = "Y1", 
-                       NodeNum =100,
-                       EdgeThr= 0.45,
-                       Layout = "force-directed",
-                       Brightness = "light",
-                       Palette = 'default1')
-res3$Networkplot$EN
+    res <- InitCros()
+    
+    res1 = LoadCros(PID = res$PID,
+                    UseExample = "example#1")
+    
+    res2 = TransScale(PID = res$PID, 
+                      Group = "T", 
+                      Vars = "all.x", 
+                      Method = "normal")
+    
+    res3 = CrosAsso(PID = res$PID,
+                    EpiDesign = "cross.sectional", 
+                    VarsY = "Y1",
+                    VarsX = "X5,X6,X7,X8,X9,X10,X11", 
+                    VarsN = "single.factor",
+                    VarsSel = FALSE, 
+                    VarsSelThr = 0.1, 
+                    IncCova = TRUE, 
+                    Family = "gaussian")
+    res3$Y1_single.factor_cross.sectional_gaussian
+    
+    res4 = VizCrosAsso(PID = res$PID,
+                       VarsY = "Y1",
+                       VarsN ="single.factor",
+                       Layout = "forest",
+                       Brightness = "dark",
+                       Palette = "default1")
+    res4$Y1_single.factor_forest_dark_default1 
+    
+    
+    - **Build multi-omic prediction model**
+    
+    res <- InitMO()
+    
+    res1 <- LoadMO(PID = res$PID, 
+                   UseExample = "example#1")
+    
+    res2 <- MulOmicsCros(PID = res$PID, 
+                         OmicGroups = "immunome,metabolome,proteome",
+                         VarsY = "Y1", 
+                         VarsC = "all.c", 
+                         TuneMethod = "default", 
+                         TuneNum = 5, 
+                         RsmpMethod = "cv",
+                         VarsImpThr = 0.85,
+                         SG_Lrns ="enet,rf")
+    res2$SGModel_summary
+    
+    res3 <- VizMulOmicCros(PID = res$PID, 
+                           VarsY = "Y1", 
+                           NodeNum =100,
+                           EdgeThr= 0.45,
+                           Layout = "force-directed",
+                           Brightness = "light",
+                           Palette = 'default1')
+    res3$Networkplot$EN
 
 
 - **Find the biological link in protein-protein interaction mode**
 
-res = InitBioLink()
-
-res1 = LoadBioLink(PID = res$PID,
-                   UseExample = "example#1")
-
-res2 = ConvToExpoID(PID = res$PID)
-res2
-
-res3 = BioLink(PID = res$PID, 
-               Mode = "PPI", 
-               ChemCas = "default",
-               ChemInchikey = "default",
-               DiseaseID = "default",
-               MetabolomeID = "default",
-               MetBiospec = "blood", 
-               ProteomeID = "default")
-res3
-
-res4 = VizBioLink(PID = res$PID, 
-                  Mode = 'PPI', 
-                  Layout = "force-directed",
-                  Brightness = "dark", 
-                  Palette = "default1")
-res4
+    res = InitBioLink()
+    
+    res1 = LoadBioLink(PID = res$PID,
+                       UseExample = "example#1")
+    
+    res2 = ConvToExpoID(PID = res$PID)
+    res2
+    
+    res3 = BioLink(PID = res$PID, 
+                   Mode = "PPI", 
+                   ChemCas = "default",
+                   ChemInchikey = "default",
+                   DiseaseID = "default",
+                   MetabolomeID = "default",
+                   MetBiospec = "blood", 
+                   ProteomeID = "default")
+    res3
+    
+    res4 = VizBioLink(PID = res$PID, 
+                      Mode = 'PPI', 
+                      Layout = "force-directed",
+                      Brightness = "dark", 
+                      Palette = "default1")
+    res4
 
 
 - **Pool the effect value by meta-analysis**
 
-res = InitMeta()
-
-res1 = LoadMeta(PID = res$PID,
-                UseExample = "example#1")
-
-res2 = MetaEffect(PID = res$PID)
-
-res2$MetaEffect_References
-
-res2$MetaEffect_Plot
+    res = InitMeta()
+    
+    res1 = LoadMeta(PID = res$PID,
+                    UseExample = "example#1")
+    
+    res2 = MetaEffect(PID = res$PID)
+    
+    res2$MetaEffect_References
+    
+    res2$MetaEffect_Plot
+    
