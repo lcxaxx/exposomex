@@ -24,7 +24,7 @@ library(exposomex)
 
 - **Convert chemical name to CAS.RN**
 
-res <- InitDb()
+    res <- InitDb()
 
 res1 = LoadDb(PID = res$PID, 
               UseExample = "example#1")
