@@ -14,6 +14,7 @@ Co-founders: Bin Wang (Peking University, binwang@pku.edu.cn) and Mingliang Fang
 2022-11-27
 
 
+
 ### **Quick start** 
 
 devtools::install_github("ExposomeX/exposomex", force = TRUE)
@@ -21,7 +22,7 @@ devtools::install_github("ExposomeX/exposomex", force = TRUE)
 library(exposomex)
 
 
-- Convert chemical name to CAS.RN
+- **Convert chemical name to CAS.RN**
 
 res <- InitDb()
 
