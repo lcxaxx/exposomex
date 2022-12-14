@@ -21,6 +21,7 @@ devtools::install_github("ExposomeX/exposomex", force = TRUE)
 library(exposomex)
 
 #Convert chemical name to CAS.RN
+
 res <- InitDb()
 
 res1 = LoadDb(PID = res$PID, 
@@ -33,6 +34,7 @@ res2 = ExpoConv(PID = res$PID,
 res2
 
 #Calculate the association
+
 res <- InitCros()
 
 res1 = LoadCros(PID = res$PID,
@@ -63,6 +65,7 @@ res4 = VizCrosAsso(PID = res$PID,
 res4$Y1_single.factor_forest_dark_default1 
 
 #Build molti-omic prediction model
+
 res <- InitMO()
 
 res1 <- LoadMO(PID = res$PID, 
@@ -89,6 +92,7 @@ res3 <- VizMulOmicCros(PID = res$PID,
 res3$Networkplot$EN
 
 #Find the biological link in protein-protein interaction mode
+
 res = InitBioLink()
 
 res1 = LoadBioLink(PID = res$PID,
@@ -115,6 +119,7 @@ res4 = VizBioLink(PID = res$PID,
 res4
 
 #Pool the effect value by meta-analysis
+
 res = InitMeta()
 
 res1 = LoadMeta(PID = res$PID,
