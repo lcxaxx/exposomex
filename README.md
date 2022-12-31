@@ -19,7 +19,7 @@ devtools::install_github("ExposomeX/exposomex", force = TRUE)
 
 library(exposomex)
 
-#### The template excel files of the imput data can be downloaded from the website https://github.com/ExposomeX/data_template. Or you can use our example data by setting UseExample = "example#1"
+**Note:**  The template excel files of the imput data can be downloaded from the website https://github.com/ExposomeX/data_template. Or you can use our example data by setting UseExample = "example#1"
 
 - **Convert chemical name to CAS.RN**
 
